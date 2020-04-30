@@ -37,10 +37,9 @@ jobs:
       run: echo ${{ secrets.github_token }} | pipenv run github-to-sqlite auth
     - name: Build database
       run: make
-    - uses: seanmiddleditch/gha-publish-to-git@master
-      with:
-        branch: master
-        github_token: ${{ secrets.github_token }}
-        github_pat: ${{ secrets.github_token }}
-        commit_author: "gareth@morethanseven.net"
-        commit_message: Updated database with latest content
+    - name: Commit database changes
+      run: |-
+        git config --global user.email "action-bot@example.com"
+        git config --global user.name "Action"
+        git diff --quiet || (git add kubernetes-tools.db && git commit -m "Updated database with latest entries")
+        git push

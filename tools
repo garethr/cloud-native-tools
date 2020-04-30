@@ -1,3 +1,4 @@
+helm/helm
 instrumenta/conftest
 instrumenta/kubeval
 windmilleng/tilt

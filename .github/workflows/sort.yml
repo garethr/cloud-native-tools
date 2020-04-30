@@ -1,0 +1,23 @@
+name: Sort tools list
+
+on:
+  push:
+    branches:
+    - master
+    paths:
+    - "tools"
+
+jobs:
+  sort:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repo
+      uses: actions/checkout@v2
+    - name: Sort list of tools
+      run: make sort
+    - name: Commit any changes to tools list
+      run: |-
+        git config --global user.email "action-bot@example.com"
+        git config --global user.name "Action"
+        git diff --quiet || (git add tools && git commit -m "Resorted tools list")
+        git push

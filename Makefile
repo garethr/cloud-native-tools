@@ -18,7 +18,4 @@ views: views/*.sql
 serve:
 	@pipenv run datasette ${DATABASE} -m metadata.json
 
-install:
-	pipenv install
-
-.PHONY: build sort data views serve install
+.PHONY: build sort data views serve

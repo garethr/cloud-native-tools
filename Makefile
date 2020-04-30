@@ -8,6 +8,7 @@ sort: tools
 data: tools
 	@while read repo; do \
 		pipenv run github-to-sqlite releases ${DATABASE} $${repo} ; \
+		pipenv run github-to-sqlite contributors ${DATABASE} $${repo} ; \
 	done < $^
 
 views: views/*.sql

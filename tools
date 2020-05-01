@@ -20,9 +20,12 @@ linkerd/linkerd
 nats-io/nats-server
 open-policy-agent/opa
 prometheus/prometheus
-quasecurity/kube-bench
 rook/rook
 theupdateframework/notary
 tikv/tikv
 vitessio/vitess
 windmilleng/tilt
+kubernetes-sigs/kustomize
+aquasecurity/kube-bench
+buildpacks/pack
+fluxcd/flux

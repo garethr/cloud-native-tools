@@ -1,5 +1,7 @@
+aquasecurity/kube-bench
 argoproj/argo
 argoproj/argo-cd
+buildpacks/pack
 buildpacks/pack
 containerd/containerd
 coredns/coredns
@@ -10,11 +12,13 @@ etcd-io/etcd
 falcosecurity/falco
 fluent/fluentd
 fluxcd/flux
+fluxcd/flux
 goharbor/harbor
 helm/helm
 instrumenta/conftest
 instrumenta/kubeval
 jaegertracing/jaegerd
+kubernetes-sigs/kustomize
 kubernetes-sigs/kustomize
 linkerd/linkerd
 nats-io/nats-server
@@ -25,7 +29,3 @@ theupdateframework/notary
 tikv/tikv
 vitessio/vitess
 windmilleng/tilt
-kubernetes-sigs/kustomize
-aquasecurity/kube-bench
-buildpacks/pack
-fluxcd/flux

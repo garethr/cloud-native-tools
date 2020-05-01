@@ -29,3 +29,4 @@ theupdateframework/notary
 tikv/tikv
 vitessio/vitess
 windmilleng/tilt
+kubernetes-sigs/kind

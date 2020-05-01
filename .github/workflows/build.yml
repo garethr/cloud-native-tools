@@ -1,4 +1,4 @@
-name: Build database
+name: Database
 
 on:
   push:
@@ -41,10 +41,10 @@ jobs:
       run: |-
         git config --global user.email "action-bot@example.com"
         git config --global user.name "Action"
-        git diff --quiet || (git add kubernetes-tools.db && git commit -m "Updated database with latest entries")
+        git diff --quiet || (git add cloud-native-tools.db && git commit -m "Updated database with latest entries")
         git push
     - name: Save database as an artifact
       uses: actions/upload-artifact@v1
       with:
-        name: Kubernetes tools
-        path: kubernetes-tools.db
+        name: Cloud Native tools database
+        path: cloud-native-tools.db

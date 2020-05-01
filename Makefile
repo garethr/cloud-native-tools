@@ -1,4 +1,4 @@
-DATABASE=kubernetes-tools.db
+DATABASE=cloud-native-tools.db
 
 build: data views
 

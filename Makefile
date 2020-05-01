@@ -7,6 +7,7 @@ sort: tools
 
 data: tools
 	@while read repo; do \
+		echo "Importing $${repo}" ; \
 		pipenv run github-to-sqlite releases ${DATABASE} $${repo} ; \
 		pipenv run github-to-sqlite contributors ${DATABASE} $${repo} ; \
 	done < $^

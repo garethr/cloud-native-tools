@@ -1,0 +1,38 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+    - master
+    paths:
+    - "cloud-native-tools.db"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      with:
+        project_id: ${{ secrets.GCP_PROJECT_ID }}
+        service_account_email: ${{ secrets.GCP_SA_EMAIL }}
+        service_account_key: ${{ secrets.GCP_SA_KEY }}
+        export_default_credentials: true
+    - run: gcloud info
+    - name: Set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pipenv
+        pipenv install
+    - uses: actions/cache@v1
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/Pipfile') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    - name: Deploy database to Google Cloud Run
+      run: pipenv run datasette publish cloudrun cloud-native-tools.db --service=cloud-native-tools

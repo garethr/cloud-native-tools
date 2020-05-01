@@ -16,7 +16,10 @@ views: views/*.sql
 		sqlite3 ${DATABASE} < $${view} ; \
     done
 
+deploy:
+	@pipenv run datasette publish heroku ${DATABASE} -n cloud-native-tools -m metadata.json
+
 serve:
 	@pipenv run datasette ${DATABASE} -m metadata.json
 
-.PHONY: build sort data views serve
+.PHONY: build sort data views deploy serve

@@ -7,6 +7,7 @@ on:
     paths:
     - "*"
     - "!README.md"
+    - "!cloud-native-tools.db"
   schedule:
     - cron:  "0 0 * * 0"
 

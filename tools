@@ -2,4 +2,5 @@ containerd/containerd
 helm/helm
 instrumenta/conftest
 instrumenta/kubeval
+open-policy-agent/opa
 windmilleng/tilt

@@ -10,4 +10,4 @@ Information is imported from all projects in the `repos` file using [github-to-s
 Hosted publically on [cloud-native-tools.herokuapp.com](https://cloud-native-tools.herokuapp.com/) using [Datasette](https://github.com/simonw/datasette).
 
 Missing a project? Please submit a pull request to add your project to
-the list in [tools](tools).
+the list in [`repos`](repos).

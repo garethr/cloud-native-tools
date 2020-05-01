@@ -2,10 +2,10 @@ DATABASE=cloud-native-tools.db
 
 build: data views
 
-sort: tools
+sort: repos
 	sort $^ -o $^
 
-data: tools
+data: repos
 	@while read repo; do \
 		echo "Importing $${repo}" ; \
 		pipenv run github-to-sqlite releases ${DATABASE} $${repo} ; \

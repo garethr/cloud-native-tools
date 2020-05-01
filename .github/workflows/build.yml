@@ -42,7 +42,7 @@ jobs:
       run: |-
         git config --global user.email "action-bot@example.com"
         git config --global user.name "Action"
-        git diff --quiet || (git add cloud-native-tools.db tools && git commit -m "Updated database with latest entries")
+        git diff --quiet || (git add cloud-native-tools.db repos && git commit -m "Updated database with latest entries")
         git push
     - name: Save database as an artifact
       uses: actions/upload-artifact@v1

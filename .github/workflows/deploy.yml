@@ -35,4 +35,4 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-pip-
     - name: Deploy database to Google Cloud Run
-      run: pipenv run datasette publish cloudrun cloud-native-tools.db --service=cloud-native-tools
+      run: pipenv run datasette publish cloudrun cloud-native-tools.db --service=cloud-native-tools -m metadata.json

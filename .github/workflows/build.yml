@@ -37,12 +37,12 @@ jobs:
     - name: Authenticate to GitHub API
       run: echo ${{ secrets.github_token }} | pipenv run github-to-sqlite auth
     - name: Build database
-      run: make
+      run: make sort build
     - name: Commit latest database changes
       run: |-
         git config --global user.email "action-bot@example.com"
         git config --global user.name "Action"
-        git diff --quiet || (git add cloud-native-tools.db && git commit -m "Updated database with latest entries")
+        git diff --quiet || (git add cloud-native-tools.db tools && git commit -m "Updated database with latest entries")
         git push
     - name: Save database as an artifact
       uses: actions/upload-artifact@v1

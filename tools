@@ -23,6 +23,10 @@ nats-io/nats-server
 open-policy-agent/opa
 prometheus/prometheus
 rook/rook
+tektoncd/cli
+tektoncd/dashboard
+tektoncd/pipeline
+tektoncd/triggers
 theupdateframework/notary
 tikv/tikv
 vitessio/vitess

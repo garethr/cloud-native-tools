@@ -22,3 +22,7 @@ theupdateframework/notary
 tikv/tikv
 vitessio/vitess
 windmilleng/tilt
+kubernetes-sigs/kustomize
+quasecurity/kube-bench
+buildpacks/pack
+fluxcd/flux

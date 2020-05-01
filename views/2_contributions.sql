@@ -1,6 +1,7 @@
 CREATE VIEW contributions AS SELECT
   users.login AS username,
   SUM(contributions) AS commits,
+  COUNT(repos.name) AS num_projects,
   GROUP_CONCAT(repos.name) AS projects
 FROM
   contributors

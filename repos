@@ -2,6 +2,8 @@ aquasecurity/kube-bench
 argoproj/argo
 argoproj/argo-cd
 buildpacks/pack
+cnabio/duffle
+cnabio/signy
 containerd/containerd
 coredns/coredns
 cri-o/cri-o
@@ -13,6 +15,7 @@ fluent/fluentd
 fluxcd/flux
 goharbor/harbor
 helm/helm
+in-toto/in-toto
 instrumenta/conftest
 instrumenta/kubeval
 jaegertracing/jaeger
@@ -28,10 +31,7 @@ tektoncd/dashboard
 tektoncd/pipeline
 tektoncd/triggers
 theupdateframework/notary
+theupdateframework/tuf
 tikv/tikv
 vitessio/vitess
 windmilleng/tilt
-in-toto/in-toto
-theupdateframework/tuf
-cnabio/duffle
-cnabio/signy

@@ -31,3 +31,7 @@ theupdateframework/notary
 tikv/tikv
 vitessio/vitess
 windmilleng/tilt
+in-toto/in-toto
+theupdateframework/tuf
+cnabio/duffle
+cnabio/signy
